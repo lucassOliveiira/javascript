@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando DOM</title>
+    <style>
+        body {
+            background-color: rgba(172, 109, 230, 0.678);
+            font: normal 18pt Arial;
+            color: white;           
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando DOM</h1>
+    <p class="primeiro">Estuando DOM em <strong id="forto">JavaScript</strong></p>
+    <p id="paragraph">Mudando cores em JavaScript</p>
+    <div id="diva">Isso aqui é um DIV</div>
+    <script>
+        var classeum = window.document.getElementById('paragraph')
+        classeum.style.background = 'blue'
+        var title = window.document.getElementsByTagName('h1')[0]
+        title.innerHTML = '<p>Manipulando com JS</p>'
+        var car = window.document.querySelector('div#diva')
+        car.style.color = 'blueviolet'
+        var forte = window.document.querySelector('strong#forto')
+        forte.style.color = 'red'
+    </script>
+</body>
+</html>

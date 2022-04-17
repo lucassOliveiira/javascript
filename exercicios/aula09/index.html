@@ -19,15 +19,33 @@
     <h1>Iniciando estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
     <script>
-        var corpo = document.body
-        var p1 = document.getElementsByTagName('p')[1]
-        //alert(p1.innerText)
-        //document.write(p1.innerHTML)
-        //document.write('Está escrtito assim: ' + p1.innerText)
-        //corpo.style.background = 'yellow'
-        //p1.style.color = 'red'
+        var corpo = window.document.body
+
+        /* Por Marca */
+
+        //var p1 = window.document.getElementsByTagName('p')[1]
+        //p1.style.color = 'blue'
+        //corpo.style.background = 'black'
+        //window.document.write('Está escrito assim: ' + p1.innerText)
+
+        /* Por ID */
+
+        //var mesage = window.document.getElementById('msg')
+        //mesage.style.background = 'blueviolet'
+        //mesage.innerText = 'Estou Aguardando...'
+
+        /* Por Nome */ 
+
+        //var mesage = window.document.getElementsByName('msg')[0]
+        //mesage.innerText = 'Olá, Cara'
+        //mesage.style.background = 'violet'
+
+        /* Query Selector */
+
+        //var mesage = window.document.querySelector('div#msg')
+        //mesage.style.background = 'blue'
     </script>
 </body>
 </html>
