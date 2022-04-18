@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 02</title>
+</head>
+<body>
+    <h1>Interagindo com um botão</h1>
+    <button id="botao">Clique em mim</button>
+    <script>
+        var botao = document.getElementById('botao')
+        botao.addEventListener('click', clicar)
+        function clicar() {
+            window.alert('Você acaba de clicar no botão')
+        }
+    </script>
+</body>
+</html>

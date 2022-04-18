@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando FUNCTION</title>
+    <style>
+        body {
+            font: bold 30pt Arial;
+            color: white;
+        }
+
+        div {
+            width: 400px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            margin: auto;
+            background-color: rgb(24, 82, 158);
+        }
+    </style>
+</head>
+<body>
+    <div id="interagindo">Clique Aqui!</div>
+    <script>
+        var interagir = window.document.getElementById('interagindo')
+        interagir.addEventListener('click', clicar)
+        interagir.addEventListener('mouseover', entrar)
+        interagir.addEventListener('mouseout', sair)
+
+        function clicar() {
+            interagir.innerText = 'Clicou'
+            interagir.style.background = 'blueviolet'
+        }
+
+        function entrar() {
+            interagir.innerText = 'Entrou!'
+        }
+
+        function sair() {
+            interagir.innerText = 'Saiu!'
+            interagir.style.background = 'rgb(24, 82, 158)'
+        }
+    </script>
+</body>
+</html>
