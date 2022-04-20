@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste 02</title>
+    <style>
+        button#botao {
+            display: block;
+            margin-top: 30px;
+            width: 150px;
+            height: 50px;
+            font: bold 12pt Arial;
+            background-color: #A305FF;
+            color: white;
+            border: 4px solid #AA5FE8;
+        }
+    </style>
 </head>
 <body>
     <h1>Interagindo com um botão</h1>
@@ -13,7 +25,9 @@
         var botao = document.getElementById('botao')
         botao.addEventListener('click', clicar)
         function clicar() {
-            window.alert('Você acaba de clicar no botão')
+            var name = window.prompt('Qual é o seu nome?')
+            var age = window.prompt('Quantos anos você tem?')
+            window.confirm(`Para confirmar sua inscrição: seu nome é ${name} e você tem ${age} anos?`)
         }
     </script>
 </body>
