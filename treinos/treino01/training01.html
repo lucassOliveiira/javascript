@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste Salarial</title>
+    <style> 
+        h1 {
+            font: bolder 32pt Arial;
+        }
+
+        button#btn1 {
+            width: 200px;
+            height: 60px;
+            font-size: 16pt;
+            background-image: linear-gradient(to top, white, rgb(211, 211, 211));
+        }
+
+        div#btn2 {
+            font: normal 18pt Arial;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste Salarial</h1>
+    <button id="btn1">Reajustar Salário</button>
+    <div id="btn2">Clique no botão acima para iniciar</div>
+    <script>
+        var botao1 = window.document.getElementById('btn1')
+        var botao2 = window.document.getElementById('btn2')
+        botao1.addEventListener('click', clicar)
+        function clicar () {
+            var name = window.prompt('Qual é o nome do funcionário?')
+            var salario = Number(prompt(`Qual é o salário de ${name}?`))
+            var porcento = Number(prompt(`O salário de ${name} vai ser reajustado em qual porcentagem?`))
+            var valorp = Number(salario * porcento / 100)
+            var valoreal = Number(salario + valorp)
+
+            btn2.innerHTML = (`<h2>${name} recebeu um aumento salarial!!!</h2>`)
+
+            btn2.innerHTML += (`O salario atual era de ${Number(salario).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} <br>`)
+
+            btn2.innerHTML += (`Com um aumento de ${porcento}%, o salário vai aumentar  ${Number(valorp).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} no proximo mês. <br>`)
+
+            btn2.innerHTML += (`E a partir daí, ${name} vai passar a ganhar ${Number(valoreal).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+        }
+    </script>
+</body>
+</html>
