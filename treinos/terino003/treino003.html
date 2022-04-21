@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio boas-vindas</title>
+    <style>
+        h1 {
+            font-size: 34pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button#botao {
+            width: 150px;
+            height: 50px;
+            font-size: 14pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boas-vindas</h1>
+    <button id="botao" onclick="clicar()">Inicie o desafio</button>
+    <script>
+        document.getElementById('botao')
+        function clicar() {
+           var name = window.prompt('Qual é o seu nome?')
+           var age = window.prompt(`Olá, ${name}! Quantos anos você tem?`)
+           window.alert(`Acabei de conhecer ${name}, que tem ${age} anos idade!`)
+        }
+    </script>
+</body>
+</html>
