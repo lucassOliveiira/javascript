@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 004</title>
+    <style>
+        body {
+            font-family: Tahoma, Verdana, sans-serif;
+        }
+
+        button#botao {
+            width: 180px;
+            height: 70px;
+            font: bold 12pt Tahoma;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <button id="botao" onclick="clicar()">Comprar produto</button>
+    <script>
+        var btn = document.querySelector('button#botao')
+        //var total = (custo - pay)
+        function clicar() {
+            var prod = prompt('Que produto você está comprando?')
+
+            var custo = window.prompt(`Quanto custa o ${prod} que você está comprando?`)
+
+            var pay = window.prompt(`Qual foi o valor que você deu para pagar no ${prod}`)
+
+            var troco = (custo - pay)
+
+            var total = window.alert(`Você comprou um ${prod} que custou ${custo.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}.
+            Deu ${pay.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})} em dinheiro e vai receber ${troco.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})} de troco!`)
+        }
+    </script>
+</body>
+</html>

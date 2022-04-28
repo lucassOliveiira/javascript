@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+    <style>
+        body {
+        font-family: Tahoma;
+        text-align: center;
+    }
+
+    button {
+        margin-bottom: 15px;
+        height: 50px;
+        width: 50%;
+        font: normal 20pt Tahoma;
+    }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button id="botao" onclick="clicar()">Converter</button>
+    <div id="resultado">Clique no botão acima para iniciar</div>
+    <script>
+        var med = document.getElementById('botao')
+        var res = document.getElementById('resultado')
+        function clicar() {
+           var med = Number(window.prompt('Digite uma distância em metros (m)'))
+           var km = (med / 1000)
+           var hm = (med / 100)
+           var dam = (med / 10)
+           var dm = (med / 1)
+           var cm = (med / 0.1)
+           var mm = (med / 0.01)
+
+            res.innerHTML = (`<h2>A distância de ${med} metros, corresponde a...</h2>`)
+
+            res.innerHTML += (`${km.toLocaleString({style: 'decimal'})} quilômetros (Km) <br>`)
+
+            res.innerHTML += (`${hm.toLocaleString({style: 'decimal'})} hectômetros (Hm) <br>`)
+
+            res.innerHTML += (`${dam.toLocaleString({style: 'decimal'})} decâmetros (Dam) <br>`)
+
+            res.innerHTML += (`${dm.toLocaleString({style: 'decimal'})} decimetros (Dm) <br>`)
+
+            res.innerHTML += (`${cm.toLocaleString({style: 'decimal'})} centímetros (Cm) <br>`)
+
+            res.innerHTML += (`${mm.toLocaleString({style: 'decimal'})} Milímetros (Mm)`)
+        }
+    </script>
+</body>
+</html>
