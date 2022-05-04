@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAÍS</title>
+    <style>
+        body {
+            font: normal 16pt Tahoma;
+        }
+
+        #botao {
+            width: 80px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Localidade</h1>
+    Que país você mora: <input type="text" name="lugar" id="lugar">
+    <input type="submit" value="Check" id="botao" onclick="clicar()">
+    <div id="res"></div>
+    <script>
+        function clicar() {
+            var local = document.getElementById('lugar')
+            var country = (local.value) 
+
+            var res = document.querySelector('div#res')
+            res.innerHTML = `<h2>Você está vivendo no/a: ${country}!</h2>`
+            if (country == 'Brasil' || country == 'brasil') {
+                res.innerHTML += '<p>Você é brasileiro!</p>'
+            } else {
+                res.innerHTML += '<p>Você é estrangeiro!</p>'
+            }
+        }
+    </script>
+</body>
+</html>
